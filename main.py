@@ -41,13 +41,12 @@ def correlationMatrix(correlation_matrix):
 def TimeRequiredToStartABusiness(data):
     # Set the figure size
     plt.figure(figsize = (12, 6))
-    num_indicators = len(data[
-                             'Time required to start a business , female (days)'])
+    # num_indicators = len(data['Time required to start a business , female (days)'])
     # Exclude 'Country Name' from the count
 
     # Bar width and positions
     bar_width = 0.2
-    bar_positions = np.arange(len(data['Time required to start a business , female (days)']))
+    bar_positions = np.arange(len(data['Time required to start a business, female (days)']))
     # Create bar plots for each indicator
     for i , indicator in enumerate(data[selected_indicators]):  # Exclude 'Country Name'
         plt.bar(bar_positions + i * bar_width , data[indicator] ,
